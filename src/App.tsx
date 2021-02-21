@@ -24,8 +24,9 @@ const App = () => {
       const p1 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/glennarnold/psn')).data
       const p2 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/xlodex/psn')).data
       const p3 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/accidentalbeasty/psn')).data
+      const p4 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/myfuture2bright/psn')).data
       console.log()
-      setStuff({ p1, p2, p3 })
+      setStuff({ p1, p2, p3, p4 })
     }
     getStuff()
   }, [])
@@ -59,11 +60,13 @@ const App = () => {
           <LastMatchTile player={stuff.p1} />
           <LastMatchTile player={stuff.p2} />
           <LastMatchTile player={stuff.p3} />
+          <LastMatchTile player={stuff.p4} />
         </TileRow>
         <TileRow title='Last 20 matches:' >
           <LastMatchesTile player={stuff.p1} />
           <LastMatchesTile player={stuff.p2} />
           <LastMatchesTile player={stuff.p3} />
+          <LastMatchesTile player={stuff.p4} />
         </TileRow>
       </div>
     </AppContext.Provider>
