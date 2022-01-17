@@ -24,7 +24,7 @@ const App = () => {
       const p1 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/glennarnold/psn')).data
       const p2 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/xlodex/psn')).data
       const p3 = await (await axios.get('https://sigl.herokuapp.com/api/v1/warzone/matches/accidentalbeasty/psn')).data
-      setStuff({ p1, p2, p3, p4 })
+      setStuff({ p1, p2, p3 })
     }
     getStuff()
   }, [])
